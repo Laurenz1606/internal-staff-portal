@@ -1,6 +1,10 @@
-//code here
-export function works() {
-  return console.log("Works")
+import { config } from "dotenv";
+
+//load env vars (development only)
+if (process.env.NODE_ENV !== "production") {
+  config();
 }
 
-works()
+//load core modules
+import "./mongoose";
+import "./express";
