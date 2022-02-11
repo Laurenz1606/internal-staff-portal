@@ -1,0 +1,10 @@
+{
+  "name": "internal-staff-portal",
+  "version": "1.0.0",
+  "description": "The mk:return managment platform.",
+  "main": "index.js",
+  "repository": "https://github.com/Laurenz1606/internal-staff-portal.git",
+  "author": "Laurenz1606 <laurenz.rausche@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

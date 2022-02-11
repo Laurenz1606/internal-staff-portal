@@ -1,0 +1,24 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "bin": "bin/index.js",
+  "author": "laurenz1606 <laurenz.rausche@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn remove && tsc",
+    "dev:start": "ts-node src/index.ts",
+    "dev:watch": "ts-node-dev --respawn src/index.ts",
+    "fix": "rimraf yarn.lock && rimraf node_modules && yarn install",
+    "prod:start": "yarn build && node dist/index.js",
+    "remove": "rimraf ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  }
+}
