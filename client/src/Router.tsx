@@ -10,6 +10,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Auth from "./Auth";
+import SidebarLayout from "./Layouts/Sidebar";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 
@@ -47,7 +48,9 @@ export default function Router() {
             path="/"
             element={
               <Guard type="LoggedInOnly">
-                <Outlet />
+                <SidebarLayout>
+                  <Outlet />
+                </SidebarLayout>
               </Guard>
             }
           >

@@ -3,9 +3,9 @@
 
 
 "@authfunctions/express@^3.1.5":
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/@authfunctions/express/-/express-3.2.5.tgz#dff149eab7db9a2021bfa0c0db63036b7fc4982a"
-  integrity sha512-HPqquRMOiTi633Kfu/zSsYqRvwBIpGxhWliGSEGnXdteYZQ7UlurMsNxxY8oSuM3087r0sFr6++f9OoMsPbXaA==
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/@authfunctions/express/-/express-3.2.6.tgz#edbf048381ed39632f12e6884d035140a73aa199"
+  integrity sha512-bzFkWQHqCGR1/d2kLAsucqXc+sdFME7fqeromozlRsSymtoAqOUmAJhIESRYC1Z4EuixuqpasV5vlebrh8EfVA==
   dependencies:
     bcrypt "^5.0.1"
     express "^4.17.2"
