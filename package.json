@@ -6,5 +6,10 @@
   "repository": "https://github.com/Laurenz1606/internal-staff-portal.git",
   "author": "Laurenz1606 <laurenz.rausche@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "deploy": "yarn deploy:client && yarn deploy:server",
+    "deploy:client": "cd client && sudo rm -rf /var/www/isp.mk-return.de/client/* && yarn build && sudo cp -r build /var/www/isp.mk-return.de/client/build && sudo cp ../client-deploy/* /var/www/isp.mk-return.de/client && cd /var/www/isp.mk-return.de/client && sudo yarn install --production && cd .. && sudo pm2 flush isp-client && sudo pm2 restart ecosystem.config.js --only isp-client",
+    "deploy:server": "cd server && sudo rm -rf /var/www/isp.mk-return.de/server/* && yarn build && sudo cp -r dist /var/www/isp.mk-return.de/server && sudo cp package.json /var/www/isp.mk-return.de/server && cd /var/www/isp.mk-return.de/server && sudo yarn install --production && cd ..  && sudo pm2 flush isp-server && sudo pm2 restart ecosystem.config.js --only isp-server"
+  }
 }

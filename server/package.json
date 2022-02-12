@@ -6,12 +6,11 @@
   "author": "laurenz1606 <laurenz.rausche@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn remove && tsc",
+    "build": "yarn clean && tsc",
+    "clean": "rimraf ./dist",
     "dev:start": "ts-node src/index.ts",
     "dev:watch": "ts-node-dev --respawn src/index.ts",
-    "fix": "rimraf yarn.lock && rimraf node_modules && yarn install",
-    "prod:start": "yarn build && node dist/index.js",
-    "remove": "rimraf ./dist"
+    "fix": "rimraf yarn.lock && rimraf node_modules && yarn install"
   },
   "dependencies": {
     "@authfunctions/express": "^3.1.5",
