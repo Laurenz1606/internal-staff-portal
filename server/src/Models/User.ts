@@ -1,4 +1,5 @@
 import { model, Schema } from "mongoose";
+import { v4 } from "uuid";
 
 //the user interface
 export interface IUser {
@@ -13,6 +14,7 @@ const userSchema = new Schema<IUser>({
   _id: {
     type: String,
     required: true,
+    default: v4
   },
   username: {
     type: String,
