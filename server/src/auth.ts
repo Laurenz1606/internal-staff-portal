@@ -90,3 +90,18 @@ auth.use("deleteToken", async ({ token }) => {
     return [true];
   }
 });
+
+//intercept the login
+auth.intercept("login", async ({ id }) => {
+  try {
+    const user = await UserModel.findById(id);
+    if (user?.active) return [false];
+    return [true];
+  } catch (err) {
+    logger.log("error", String(err));
+    return [true];
+  }
+});
+
+//disable register
+auth.intercept("register", () => [true]);
